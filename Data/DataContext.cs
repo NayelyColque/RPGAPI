@@ -31,6 +31,10 @@ namespace RpgApi.Data
                 new Personagem() { Id = 6, Nome = "Celeborn", PontosVida = 100, Forca = 21, Defesa = 13, Inteligencia = 34, Classe = ClasseEnum.Clerigo },
                 new Personagem() { Id = 7, Nome = "Radagast", PontosVida = 100, Forca = 25, Defesa = 11, Inteligencia = 35, Classe = ClasseEnum.Mago }
             );
+
+            protected override void ConfigureConventions(ModelConfigurationBuilder ConfiguraationBuilder){
+                ConfiguraationBuilder.Properties<string>().HaveColumnType("varchar").HaveMazLenght(200);
+            }
             //ALT + SHIFT + F
 
             //base.OnModelCreating(modelBuilder);

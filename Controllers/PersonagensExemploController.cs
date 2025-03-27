@@ -147,8 +147,9 @@ namespace RpgApi.Controllers
             List<Personagem> listaBusca = personagens.FindAll(p => p.Classe == enumDigitado);
             return Ok(listaBusca);
         }
-
-
+            //dotnet add package Microsoft.EntityFrameworkCore.SqlServer.
+            //dotnet tool install --global dotnet-ef
+            //dotnet add package Microsoft.EntityFrameworkCore.Design
 
     }
 }
